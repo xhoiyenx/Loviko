@@ -74,5 +74,5 @@ $app = require_once __DIR__.'/bootstrap/start.php';
 | and wonderful application we have whipped up for them.
 |
 */
-dump( get_included_files() );
 $app->run();
+dump( [ "load_time" => number_format( (microtime(true) - LARAVEL_START) * 1000, 0 ) . " ms", "memory" => number_format(memory_get_peak_usage() / 1024000, 3) . " mb" ] );

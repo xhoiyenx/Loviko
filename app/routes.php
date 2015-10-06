@@ -13,5 +13,5 @@
 
 Route::get('/', function()
 {
-	echo "Hello World";
+	echo App::environment();
 });
